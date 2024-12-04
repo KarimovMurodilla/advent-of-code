@@ -1,25 +1,24 @@
 from puzzles import distances
 
 class Solution:
-    def calculate_total_distance(self, distances: str):
+    def calculate_similarity_score(self, distances: str):
         rows = distances.split('\n')
         first_list = []
         second_list = []
-        total_distance = 0
+        similarity_score = 0
 
         for row in rows:
             first, second = row.split()
             first_list.append(int(first))
             second_list.append(int(second))
         
-        first_list.sort()
-        second_list.sort()
-
-        for i in range(len(first_list)):
-            total_distance += abs(first_list[i] - second_list[i])
+        for num in first_list:
+            count = second_list.count(num)
+            similarity_score += (num*count)
         
-        return total_distance
+        return similarity_score
+    
 
 s = Solution()
-res = s.calculate_total_distance(distances)
+res = s.calculate_similarity_score(distances)
 print(res)
