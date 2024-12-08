@@ -1,17 +1,4 @@
-"""
-MMMSXXMASM
-MSAMXMSMSA
-AMXSXMAAMM
-MSAMASMSMX
-XMASAMXAMM
-XXAMMXXAMA
-SMSMSASXSS
-SAXAMASAAA
-MAMMMXMMMM
-MXMXAXMASX
-"""
 from puzzles import text
-
 
 class Solution:
     def find_word(self, text: str):
